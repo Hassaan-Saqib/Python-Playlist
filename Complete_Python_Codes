@@ -423,3 +423,326 @@ for x in "banana":
   print(x)
 txt = "The best things in life are free!"
 print("free" in txt)
+"""Video Practice"""
+# count=5
+# while(count>0):
+#     print(count)
+#     count=count-1
+# else:
+#     print("Not in else") 
+# for i in range(12):
+#     if(i==0 or i==11):
+#         continue
+#     print("5 X",i,"=",5*i)
+
+# print("Leave Loop")
+# i=0
+# while(True):
+#    ( print(i)
+#     i=i+1
+#     if(i%100==0):
+#         break
+
+
+# def gmean(a,b):
+#     mean=(a*b/(a+b))
+#     return mean
+    
+
+# c=gmean(5,7)
+# d=gmean(10,1)
+
+# def checkgreater(a,b):
+#     if (a > b):
+#         print("Yes A is greater than B")
+#     elif(a==b):
+#         print("B is equal than A")
+#     else:
+#         print("B is greater than A")
+
+# checkgreater(c,d)
+# a,b=1,2
+# def less(a,b):
+#     pass
+
+# less(a,b)
+# def avg(a=9,b=1):
+#     print("The avg is",(a+b)/2)
+# avg()
+
+# def avg(**a):
+#     print(type(a))
+#     sum=0
+#     for i in a:
+#       sum=sum+i
+#     print("avg is =",sum/len(a))
+#       # avg(1,2,3,4,5,6,7,8,9
+# avg()
+"""List"""
+# l=[1,'3',5j]
+# print(l)
+# print(type(l))
+
+# l.append(7)
+# l.insert(0,2)
+# l.remove(2)
+# print(l)
+
+# # for i in l:
+# #     print(i)
+# print(l[0:3:2])
+
+# l=[1,2,3,4,5]
+# print(l)
+# l.append(5)
+# l.append(3)
+# l.sort(reverse=True)
+# l.reverse()
+# print(l.index(2))
+# print(l)
+# l.pop(0)
+# print(l)
+
+
+
+# m=l.copy()
+# m[0]=0
+# print(m)
+# l.insert(1,899)
+# print(l)
+# m=[99,100,110]
+# k=l+m
+# print(k)
+# l.extend([1,2,[33,[1000,1],99],3,4,5])
+# print(l)
+# print(len(l))
+
+"""Tuple"""
+
+# t=(1,5,6,8,9)
+# print(type(t),t)
+
+# if 5 in t:
+#     print("yes")
+# else:
+#     print("no")
+# t=t[0:2]
+# print(t)
+
+# c=("Sap","itlay","china")
+# print(id(c))
+# temp=list(c)
+# print(temp)
+# temp.append(13)
+# print(temp)
+# temp.pop(0)
+# print(temp)
+# temp[2]=99 
+# c=tuple(temp)
+# print(c)
+# print(id(c))
+# t=(1,2,3,4,5,1,2,3,4,4,4,2,3,2)
+# print(t.count(2))
+# print(t.index(3,4,8))
+# print(len(t))
+# import time
+# t=time.strftime('%H:%M:%S')
+# hour=int(time.strftime('%H'))
+# print(hour)
+# if (hour>6  and hour<12):
+#     print("good morning")
+# elif (hour>=12 and hour<18):
+#     print("good afternoon")
+# else:
+#     print("good night")
+
+# n="hassaan"
+# c="pak"
+# print(f"My name is {n} and i am from {c}")
+
+# def sq(n):
+#     '''Take a number and return it's square'''
+#     print(n**2)
+#     print(sq.__doc__)
+# sq(5)
+# print(sq.__doc__)
+
+"""SET"""
+
+# h=set()
+# h={1,2,3,4,4,5}
+# print(type(h))
+# print(h)
+# for i in h:
+#     print(i)
+
+# h.add(6)
+# print(h)
+
+# h1={8,9,7}
+# print(h.union(h1))
+# print(h,h1)
+# h.update(h1)
+# print(h)
+# h.remove(1)#discard
+# print(h)
+# h.pop()
+# print(h)
+
+"""Dict"""
+# info={
+#     1:{
+#         'name':"Karan",
+#         'age':18
+#     },
+#     2:{
+#         'name':"Hassaan",
+#         'age':19
+#     }
+# }
+# print(info.keys())
+# for i in info.keys():
+#     print(info[i])
+# print(info.items())
+
+# for key,value in info.items():
+#     print(key,value)
+
+# ep={
+#     1:10,
+#     2:30,
+#     3:40,
+#     5:20,
+#     6:70,
+#     7:80
+# }
+# ep1={
+#     8:45,
+#     9:90
+# }
+# ep.update(ep1)
+# print(ep)
+
+# #ep.clear()
+# ep.pop(1)
+
+# print(ep)
+# #del ep1
+# del ep[2]
+# print(ep)
+
+
+
+# a="3"
+# print(f"Multiplication of {a} is \n")
+# try:
+#     for i in range(11):
+#         print(f"{int(a)} * {i} = {int(a)*i}")
+# except:
+#     print("Invalid input")  # This will print if the input is not a number
+
+# try:
+#     l=[1,2,3,4,5]
+#     i=int(input("Enter the  index : "))
+#     print(l[i])
+# except:
+#     print("Some error")
+# finally:
+#     print("I always run")
+"""Raising custom errors"""
+# a=10
+# if (a<5 or a>9):
+#     raise ValueError("Value should be between 5 and 9")
+
+# l=[["what is your city","Fsd","Karachi","Lhr","Isb",1],
+#    ["what is your city","Fsd","Karachi","Lhr","Isb",1],
+#    ["what is your city","Fsd","Karachi","Lhr","Isb",1],
+#    ["what is your city","Fsd","Karachi","Lhr","Isb",1],
+#    ]
+# for i in range(0,len(l)):
+#     l1=l[i]
+#     print(f"Question for rupees 10000")
+#     print(f"a.{l1[1]}       a.{l1[2]}")
+#     print(f"a.{l1[3]}       a.{l1[4]}")
+
+# print(type(l))
+# print(type(l1))
+
+# list1 = [10, 20, 25, 30, 35]
+# # list2 = [40, 45, 60, 75, 90]
+# # list1=list1+list2
+# # print(list1)
+
+# for ind,l in enumerate(list1,start=19):
+#     print(f"Index : {ind} Value : {l}") 
+"""Virtual Environment in Python"""
+#python -m venv myenv
+# x = 100
+# y = 50
+# print(x and y)
+# print(2%6)
+# print(2**2**3)
+# def d(**k):
+#     print(type(k))
+# d()
+
+
+# def display(**kwargs):
+#     for i in kwargs:
+#         print(i)
+
+# display(emp="Kelly", salary=9000)
+
+# def add(a, b):
+#     return a+5, b+5
+
+# result = add(3, 2)
+# print(type(result))
+
+# for num in range(10, 14):
+#    for i in range(2, num):
+#        if num%i == 1:
+#           print(num)
+#           break
+# x = 0
+# for i in range(10):
+#   for j in range(-1, -10, -1):
+#     x += 1
+#     print(x)
+# var = 10
+# for i in range(10):
+#     for j in range(2, 10, 1):
+#         if var % 2 == 0:
+#             continue
+#             var += 1
+#     var+=1
+# else:
+#     var+=1
+# print(var)
+
+# sampleList = [10, 20, 30, 40]
+# del sampleList[0:6]
+# print(sampleList)
+# aList = [1, 2, 3, 4, 5, 6, 7]
+# pow2 =  [2 * x for x in aList]
+# print(pow2)
+# list1 = ['xyz', 'zara', 'PYnative']
+# print (max(list1))
+# l = [None] * 10
+# print(len(l))
+# aList = [4, 8, 12, 16]
+# aList[1:4] = [20, 24, 28]
+# print(aList)
+# sampleList = [10, 20, 30, 40, 50]
+# sampleList.pop()
+# print(sampleList)
+
+# sampleList.pop(2)
+# print(sampleList)
+# aList = [5, 10, 15, 25]
+# print(aList[::-2])
+
+# my_list = ["Hello", "Python","Hi"]
+# print("-".join(my_list))
+
+"""Why should we use if __name__="__main__": """
