@@ -1,0 +1,425 @@
+"""
+#Casting
+x = int(1)   # x will be 1
+y = int(2.8) # y will be 2
+z = int("3") # z will be 3
+
+print(type(x))
+print(type(y))
+print(type(z))
+
+#Classes Objects
+class Robot: 
+    def __init__(self, name, model, year):
+        self.name = name
+        self.model = model
+        self.year = year
+
+    def into(self): 
+        print(f"Robot {self.name} is entering the room")
+
+
+r1 = Robot("Iron Man", "2.0", 2015)  
+r1.into()  
+
+r2 = Robot("Vision", "1.0", 2020)  
+r2.into()  
+
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+  def myfunc(self):
+    print("Hello my name is " + self.name)
+
+p1 = Person("John", 36)
+
+p1.age = 40
+
+print(p1.age)
+
+#inheritance
+class R:
+    def __init__(self,n,l):
+        self.n=n
+        self.l=l
+    def print_(self):
+        print(self.n,self.l)
+x=R("Ali","Sham")
+x.print_()
+
+class H(R):
+    def __init__(self,f,l):
+        R.__init__(self,f,l)
+
+h=H("zain","Ali")
+h.print_()
+
+class Student(R):
+  def __init__(self, fname, lname):
+    super().__init__(fname, lname)
+    self.graduationyear = 2019
+
+x = Student("Mike", "Olsen")
+x.graduationyear=2020
+print(x.graduationyear)
+
+#iterator
+class MyNumbers:
+  def __iter__(self):
+    self.a = 0
+    return self
+
+  def __next__(self):
+    x = self.a
+    self.a += 1
+    return x
+
+myclass = MyNumbers()
+myiter =iter(myclass)
+
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+
+#Module Task
+import module as m
+#built in modules
+import platform 
+m.greeting("ali")
+
+x = platform.system()
+print(x)
+
+x = platform.processor()
+print(x)
+
+x= dir(platform)
+a = m.person1["age"]
+print(a)
+
+from module import person1
+print(person1["age"])
+
+#module File code
+def greeting(name):
+  print("Hello, " + name)
+person1 = {
+  "name": "John",
+  "age": 36,
+  "country": "Norway"
+}
+
+print("hello")
+#Number Conversion
+x = 1    # int
+y = 2.8  # float
+z = 1j   # complex
+
+print(x)
+print(y)
+print(z)
+print("\n")
+print(type(x))
+print(type(y))
+print(type(z))
+x = float(x)
+y = str(z)
+z = complex(y)
+
+print(x)
+print(y)
+print(z)
+print("\n")
+print(type(x))
+print(type(y))
+print(type(z))
+import random
+
+print(random.randrange(10, 100))
+
+#Polymorphsim
+
+class Vec:
+  def __init__(self, brand, model):
+    self.brand = brand
+    self.model = model
+
+class Car(Vec):
+
+  def move(self):
+    print("Drive!")
+
+class Boat(Vec):
+
+  def move(self):
+    print("Sail!")
+
+class Plane(Vec):
+
+  def move(self):
+    print("Fly!")
+
+car1 = Car("Ford", "Mustang")       #Create a Car class
+boat1 = Boat("Ibiza", "Touring 20") #Create a Boat class
+plane1 = Plane("Boeing", "747")     #Create a Plane class
+
+for x in (car1, boat1, plane1):
+  x.move()
+
+#Python Data Types
+x1=1
+x2=1.00
+x3="Sharp"
+x4=2j
+x5=["apple", "banana", "cherry"]
+x6=("hello",34,12.0)
+x7=range(3)
+x8=True
+x9=None
+x10={"name":"Ali","age":90}
+print(type(x1))
+print(type(x2))
+print(type(x3))
+print(type(x4))
+print(type(x5))
+print(type(x6))
+print(type(x7))
+print(type(x8))
+print(type(x9))
+print(type(x10))
+
+#Python Json
+import json
+
+x='{"name":"John","age":"30","city":"New York"}'
+print(x)
+y=json.loads(x)
+print(y)
+
+x = {
+  "name": "John",
+  "age": 30,
+  "city": "New York"
+}
+print(x)
+
+y = json.dumps(x)
+print(y)
+
+print(json.dumps({"name": "John", "age": 30}))
+print(json.dumps(["apple", "bananas"]))
+print(json.dumps(("apple", "bananas")))
+print(json.dumps("hello"))
+print(json.dumps(42))
+print(json.dumps(31.76))
+print(json.dumps(True))
+print(json.dumps(False))
+print(json.dumps(None))
+
+import json
+
+x = {
+  "name": "John",
+  "age": 30,
+  "married": True,
+  "divorced": False,
+  "children": ("Ann","Billy"),
+  "pets": None,
+  "cars": [
+    {"model": "BMW 230", "mpg": 27.5},
+    {"model": "Ford Edge", "mpg": 24.1}
+  ]
+}
+
+print(json.dumps(x,indent=4))
+
+print(json.dumps(x, indent=4, separators=(". ", " = ")))
+
+print(json.dumps(x, indent=4, sort_keys=True))
+#Python Math
+import math
+
+z=[2,3,9,10]
+x=min(z)# Find minimum
+y=max(z)# find maximum
+
+print(x)
+print(y)
+
+x=abs(-7.25)# Take absolute
+print(x)
+x=pow(2,3)# Power of 2^3
+print(x)
+
+x=math.sqrt(81)# root of 81
+print(x)
+
+x=7.8
+x=math.ceil(x) # lean toward the highest number
+print(x)
+x=7.8
+x=math.floor(x)# lean toward the lowest number
+print(x)
+x=math.pi# Get the value of Pi
+print(x)
+
+#Python Regex
+import re
+
+txt="The rain in china 16"
+x=re.findall("ai",txt)
+print(x)
+if x:
+  print("YES! We have a match!")
+else:
+  print("No match")
+
+x=re.findall("[0-9][0-9]",txt)
+print(x)
+txt = "The rain in Spain"
+x = re.search("Portugal", txt)
+print(x)
+x=re.split(" ",txt)
+print(x)
+
+x=re.split(" ",txt,1)
+print(x)
+
+x=re.sub(" ",'#',txt)
+print(x)
+x = re.sub("\s", "9", txt, 2)
+print(x)
+
+txt = "The rain in Spain"
+x = re.search("ai", txt)
+print(x)
+
+txt = "The rain in Spain"
+x = re.search(r"\bS\w+", txt)
+print(x.span())
+
+txt = "The rain in Spain"
+x = re.search(r"\bS\w+", txt)
+print(x.string)
+
+x = re.search(r"\bS\w+", txt)
+print(x.group())
+
+#Python Try Except
+
+try:
+    print(x)
+except NameError:
+    print("Var not defined")
+except:
+    print("Something went wrong")
+
+print("----------------------")
+try:
+  print("Hello")
+except:
+  print("Something went wrong")
+else:
+  print("Nothing went wrong")
+
+print("----------------------")
+try:
+  print(x)
+except:
+  print("Something went wrong")
+else:
+   print("else block")
+finally:
+  print("The 'try except' is finished")
+
+print("----------------------")
+try:
+  f = open("demofile.txt")
+  try:
+    f.write("Lorum Ipsum")
+  except:
+    print("Something went wrong when writing to the file")
+  finally:
+    f.close()
+except:
+  print("Something went wrong when opening the file")
+print("----------------------")
+x = -1
+
+if x < 0:
+  raise Exception("Sorry, no numbers below zero")
+print("----------------------")
+x = "hello"
+
+if not type(x) is int:
+  raise TypeError("Only integers are allowed")
+
+#Python Input
+name = input("Enter name: ")
+print(f"Hello, {name}!")
+
+#Python Dates
+import datetime
+
+x = datetime.datetime.now()
+print(x)# date complete
+print(x.year) # Year
+print(x.strftime("%A"))# Day name
+print(x.strftime("%B"))# Month Name Full
+print(x.strftime("%b"))# Short Month
+print(x.strftime("%a"))# Short Day 
+print(x.strftime("%w"))#Week Day no
+print(x.strftime("%d"))#Month  Day  no
+print(x.strftime("%m"))#Month no
+print(x.strftime("%y"))#year no
+print(x.strftime("%H"))#24 hour
+print(x.strftime("%I"))#12 hour
+print(x.strftime("%p"))#AM/PM
+print(x.strftime("%Z"))#Time Zone
+print(x.strftime("%U"))#Week Number
+print(x.strftime("%W"))#Week Number
+print(x.strftime("%c"))
+print(x.strftime("%C"))
+print(x.strftime("%x"))#local date
+print(x.strftime("%X"))#local time
+
+#python PIP
+#pip --version
+#pip install camelcase
+import camelcase
+
+c = camelcase.CamelCase()
+
+txt = "hello world"
+
+print(c.hump(txt))
+
+#remove Pip uninstall camelcase
+#pip list
+
+#String Formatting
+p=49
+txt=f"The price of {p*2:.2f}$"
+print(txt)
+
+price = 49
+txt=f"it is very {"expensive" if price>50 else "cheap"}"
+
+print(txt)
+fruit = "apples"
+txt = f"I love {fruit.upper()}"
+print(txt)
+"""
+#String
+
+a = '''Hi how are you i am 
+fine .What to do do'''
+print(a)
+for x in "banana":
+  print(x)
+txt = "The best things in life are free!"
+print("free" in txt)
