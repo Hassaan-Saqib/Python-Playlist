@@ -416,13 +416,13 @@ print(txt)
 """
 #String
 
-a = '''Hi how are you i am 
-fine .What to do do'''
-print(a)
-for x in "banana":
-  print(x)
-txt = "The best things in life are free!"
-print("free" in txt)
+#a = '''Hi how are you i am 
+# fine .What to do do'''
+# print(a)
+# for x in "banana":
+#   print(x)
+# txt = "The best things in life are free!"
+# print("free" in txt)
 """Video Practice"""
 # count=5
 # while(count>0):
@@ -746,3 +746,328 @@ print("free" in txt)
 # print("-".join(my_list))
 
 """Why should we use if __name__="__main__": """
+# import os
+
+# if(os.path.exists("data")):
+      
+#       print("File exists")
+# else:
+#      os.mkdir("data")
+
+# folders=os.listdir("data")
+# #print(folders)
+# for i in folders:
+#     # os.mkdir(f"data/Day{i+1}")
+#     # os.rename(f"data/Day{i+1}",f"data/Video{i+1}")
+#     print(i)
+#     p=os.listdir(f"data/{i}")
+#     print(type(p))
+
+# s=input("Enter a message")
+# t=s.split(" ")
+# coding =True
+# if(coding):
+#     nwords=[]
+#     for i in t:
+#         if(len(i>=3)):
+#             s
+# def m():
+#     global a
+#     a=5
+# m()
+# print(a)
+"""Lambda Function"""
+# d=lambda x,y:x**3**y
+
+# print(d(2,2))
+"""Map Filter Reduce"""
+# c=lambda x:x*x*x
+# l=[1,2,3,4,5]
+# n=list(map(c,l))
+# print(n)
+
+# def ff(a):
+#     return a>4
+# nn=filter(ff, n)
+# print(list(nn))
+
+# from functools import reduce
+# n=[1,2,3,4,5]
+
+# m=reduce(lambda x,y:x*y,n)
+
+# print(m)
+""" is vs == """
+# b=3
+# a=3
+
+
+# print(a is b)
+# print(a==b)
+
+"""introduction to OOP"""
+# class Person:
+#     name="Harry"
+#     occup="SE"
+#     Net="10"
+#     def info(self):
+#         print(f"{self.name} is a {self.occup} ")
+#         return self.name,self.Net
+# a=Person()
+# a.name="Ali"
+
+# print(type(a.info()))
+
+"""Constructor"""
+# class Person:
+#     def __init__(self,n,o):
+#         print("Hey I am a Person")
+#         self.name=n
+#         self.occ=o
+#     def info(self):
+#         print(f"{self.name} is a {self.occ} ")
+# a=Person("Ali","SE")
+# b=Person("Fatima","HR")
+# a.info()
+# b.info()
+"""Decorator in Python"""
+
+
+# def greet(fx):
+#     def mfx():
+#         print("Good Morning")
+#         fx()
+#         print("Thanks for using this func")
+#     return mfx
+
+
+# @greet
+# def h():
+#     print("hello bro") 
+# def add(a,b):
+    
+#     print(a+b)
+
+# h()
+
+"""Getter and Setter"""
+# class Myclass:
+#     def __init__(self,value):
+#         self._value=value
+#     def show(self):
+#         print(f"Show := {self._value}")
+#     @property
+#     def value(self):
+#         return 10*self
+#     @value.setter
+#     def value(self,v):
+#         return self.value/10
+    
+    
+
+
+# obj=Myclass(10)
+# obj.value(67)
+# print(obj.value)
+# obj.show()
+
+# class Emp:
+#     def __init__(self,name,id):
+#         self.name=name
+#         self.id=id
+#     def showDetail(self):
+#         print(f"The name of emloyee : {self.id} is {self.name}")
+# class Pro(Emp):
+#     def lang(self):
+#         print(f"The language of {self.name} is Python")
+
+# e1=Emp("Ali",400)
+# e2=Pro("Zain",200)
+
+# e1.showDetail()
+# e2.showDetail() 
+# e2.lang()
+
+"""Access Specifiers"""
+# class Hi:
+#     def __init__(self):
+#         self.__name="Harry"
+# a=Hi()
+# print(a._Hi__name)
+# print(a.__dir__())
+
+# class Student:
+#     def __init__(self):
+#         self._name = "Harry"
+#     def _funName(self):      # protected method
+#         return "CodeWithHarry"
+# class Subject(Student):       #inherited class
+#     pass
+# obj = Student()
+# obj1 = Subject()
+# # calling by object of Student class
+# print(obj._name)      
+# print(obj._funName())     
+# # calling by object of Subject class
+# print(obj1._name)    
+# print(obj1._funName())
+
+"""Rock Paper Scissor problem"""
+# import random
+
+# def check(comp,man):
+#     if(comp == man):
+#         return 0
+#     elif (comp==0 and man==2):
+#         return -1
+#     elif (comp==2 and man==1):
+#         return -1
+#     elif (comp==1 and man==0):
+#         return -1
+#     else:
+#          return 1
+
+# man=input("Enter 0 for Rock,1 for Paper and 2 for Scissor\n")
+# comp=random.randint(0,2)
+# print(f"Computer => {comp}\nMan => {man}")
+# a=check(comp,man)
+# print(a)
+# if(a==0):
+#    print("Draw")
+# elif(a==-1):
+#    print("Computer wins")
+# else:
+#    print("You win")
+
+# class M:
+#     def __init__(self,n):
+#         self.n=n
+#     def addtonum(self,na):
+#         self.n=self.n+na
+#     @staticmethod
+#     def addtwo(num1,num2):
+#         return num1+num2
+    
+# a=M(5)
+# print(a.n)
+# a.addtonum(6)
+# print(a.n)
+
+# print(a.addtwo(3,4))
+# print(M.addtwo(3,2))
+"""Instance vs Class variables"""
+# class Employee:
+#   companyName = "Apple"
+#   noOfEmployees = 0
+#   def __init__(self, name):
+#     self.name = name
+#     self.raise_amount = 0.02
+#     Employee.noOfEmployees +=1
+#   def showDetails(self):
+#     print(f"The name of the Employee is {self.name} and the raise amount in {self.noOfEmployees} sized {self.companyName} is {self.raise_amount}")
+
+# # Employee.showDetails(emp1)
+# emp1 = Employee("Harry")
+# emp1.raise_amount = 0.3
+# emp1.companyName = "Apple India" 
+# emp1.showDetails()
+# Employee.companyName = "Google"
+# print(Employee.companyName)
+
+# emp2 = Employee("Rohan")
+# emp2.companyName = "Nestle"
+# emp2.showDetails()
+
+"""Class methods"""
+# class Employee:
+#   company = "Apple"
+#   def show(self):
+#     print(f"The name is {self.name} and company is {self.company}")
+
+#   @classmethod
+#   def changeCompany(cls, newCompany):
+#     cls.company = newCompany
+
+
+# e1 = Employee()
+# e2=Employee()
+# e2.name="Ali"
+# e1.name = "Harry"
+# e1.show()
+# e1.changeCompany("Tesla")
+# e1.show()
+# e2.show()
+# print(Employee.company)
+
+# class Employee:
+#   def __init__(self, name, salary):
+#     self.name = name 
+#     self.salary = salary
+    
+#   @classmethod
+#   def fromStr(cls, string):
+#     return cls(string.split("-")[0], int(string.split("-")[1]))
+    
+# e1 = Employee("Harry", 12000)
+# print(e1.name)
+# print(e1.salary)
+
+# string = "John-12000"
+# e2 = Employee.fromStr(string)
+# print(e2.name)
+# print(e2.salary)
+
+# class Person:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+
+#     @classmethod
+#     def from_string(cls, string):
+#         name, age = string.split(',')
+#         return cls(name, int(age))
+
+# person = Person.from_string("John Doe, 30")
+# print(person.name, person.age)
+"""Dir,__Dict__ and Help for object introsepection"""
+
+# x=[1,2,3]
+# print(dir(x))
+
+# class p:
+#     def __init__(self,n,a):
+#         self.n=n
+#         self.a=a
+#         self.version=1
+# Per=p("Ali",19)
+# print(Per.__dict__)
+# #Return the result in the form of a dictionary self. for a class
+
+# print(help(p))
+
+"""Magic/Dunder methods"""
+
+#__str__ 
+
+"""Method Overriding"""
+class Shape:
+  def __init__(self, x, y):
+    self.x = x
+    self.y = y
+    
+  def area(self):
+      return self.x * self.y
+
+class Circle(Shape):
+    def __init__(self, radius):
+      self.radius = radius
+      super().__init__(radius, radius)
+
+    def area(self):
+        return 3.14 *  super().area()
+      
+# rec = Shape(3, 5)
+# print(rec.area())
+
+c = Circle(5)
+print(c.area())
